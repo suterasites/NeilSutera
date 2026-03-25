@@ -1,40 +1,41 @@
-import { createServer } from 'http';
-import { readFile } from 'fs/promises';
-import { join, extname } from 'path';
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = 3000;
 
-const mimeTypes = {
+const MIME = {
   '.html': 'text/html',
   '.css': 'text/css',
-  '.js': 'application/javascript',
+  '.js': 'text/javascript',
+  '.json': 'application/json',
+  '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
-  '.png': 'image/png',
+  '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
-  '.json': 'application/json',
-  '.ico': 'image/x-icon',
-  '.webp': 'image/webp',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
 };
 
-const server = createServer(async (req, res) => {
-  let filePath = req.url === '/' ? '/index.html' : decodeURIComponent(req.url);
-  filePath = join(__dirname, filePath);
-  const ext = extname(filePath).toLowerCase();
-  const contentType = mimeTypes[ext] || 'application/octet-stream';
+const server = http.createServer((req, res) => {
+  let filePath = path.join(__dirname, decodeURIComponent(req.url === '/' ? '/index.html' : req.url));
+  const ext = path.extname(filePath).toLowerCase();
+  const mime = MIME[ext] || 'application/octet-stream';
 
-  try {
-    const data = await readFile(filePath);
-    res.writeHead(200, { 'Content-Type': contentType });
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      res.writeHead(404);
+      res.end('Not found');
+      return;
+    }
+    res.writeHead(200, { 'Content-Type': mime });
     res.end(data);
-  } catch {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Not Found');
-  }
+  });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+server.listen(PORT, () => console.log(`Serving at http://localhost:${PORT}`));
