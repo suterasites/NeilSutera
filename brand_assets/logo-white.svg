@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <linearGradient id="accent-gradient-w" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7BA3D4"/>
+      <stop offset="100%" stop-color="#5B8CC5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- NS Monogram -->
+  <g transform="translate(12, 12)">
+    <!-- Outer circle ring -->
+    <circle cx="48" cy="48" r="46" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.2"/>
+    <circle cx="48" cy="48" r="42" stroke="#FFFFFF" stroke-width="0.5" fill="none" opacity="0.1"/>
+
+    <!-- Elegant N -->
+    <text x="30" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="400" fill="#FFFFFF" letter-spacing="-1">N</text>
+
+    <!-- Elegant S -->
+    <text x="52" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="400" fill="url(#accent-gradient-w)" letter-spacing="-1" opacity="0.85">S</text>
+
+    <!-- Small decorative dot -->
+    <circle cx="48" cy="86" r="2" fill="#7BA3D4" opacity="0.6"/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="118" y1="30" x2="118" y2="90" stroke="#FFFFFF" stroke-width="0.75" opacity="0.2"/>
+
+  <!-- Full name -->
+  <text x="134" y="55" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" fill="#FFFFFF" letter-spacing="3">NEIL</text>
+  <text x="134" y="85" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" fill="#FFFFFF" letter-spacing="6">SUTERA</text>
+
+  <!-- Subtle tagline -->
+  <text x="135" y="105" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#FFFFFF" letter-spacing="4" opacity="0.35">LIFE COACH</text>
+</svg>

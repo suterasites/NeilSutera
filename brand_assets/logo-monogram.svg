@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <defs>
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B6CB5"/>
+      <stop offset="100%" stop-color="#2F5A9A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle ring -->
+  <circle cx="48" cy="48" r="46" stroke="#2A2520" stroke-width="1.5" fill="none" opacity="0.15"/>
+  <circle cx="48" cy="48" r="42" stroke="#2A2520" stroke-width="0.5" fill="none" opacity="0.08"/>
+
+  <!-- Elegant N -->
+  <text x="18" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="400" fill="#2A2520" letter-spacing="-1">N</text>
+
+  <!-- Elegant S -->
+  <text x="40" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="400" fill="url(#accent-grad)" letter-spacing="-1" opacity="0.85">S</text>
+
+  <!-- Small decorative dot -->
+  <circle cx="48" cy="86" r="2" fill="#3B6CB5" opacity="0.6"/>
+</svg>
