@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Here I Am - Book by Neil Sutera | A Guide to Living with Purpose</title>
+  <meta name="description" content="Here I Am by Neil Sutera - a memoir and self-help guide for those ready to stop drifting and start living with purpose. Coming soon.">
+  <meta name="keywords" content="Here I Am book, Neil Sutera book, self-help book, personal development book, living with purpose, self-awareness book Melbourne">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Here I Am - Book by Neil Sutera">
+  <meta property="og:description" content="A guide written for those ready to stop drifting aimlessly through life and start living with purpose.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFAF6',
+              stone: '#F0EBE3',
+              sand: '#E4DDD2',
+              charcoal: '#2A2520',
+              dark: '#1E1B18',
+              sage: '#6B7F5E',
+              'sage-dark': '#556B49',
+              'sage-light': '#8BA37E',
+              gold: '#B8924A',
+              'gold-light': '#D4B06A',
+              warm: '#8C7B6B',
+            }
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; color: #2A2520; background: #FDFAF6; }
+
+    /* Grain texture overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Spring easing */
+    .spring-hover {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    }
+    .spring-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Heading tracking */
+    .heading-tight { letter-spacing: -0.03em; }
+
+    /* Body line height */
+    .body-relaxed { line-height: 1.7; }
+
+    /* Layered shadows */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 2px rgba(42, 37, 32, 0.04),
+        0 4px 8px rgba(42, 37, 32, 0.04),
+        0 12px 24px rgba(42, 37, 32, 0.06);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 4px rgba(42, 37, 32, 0.03),
+        0 8px 16px rgba(42, 37, 32, 0.05),
+        0 24px 48px rgba(42, 37, 32, 0.08);
+    }
+
+    /* Fade in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      opacity: 0;
+    }
+    .fade-up-delay-1 { animation-delay: 0.15s; }
+    .fade-up-delay-2 { animation-delay: 0.3s; }
+    .fade-up-delay-3 { animation-delay: 0.45s; }
+
+    /* Nav scroll state */
+    .nav-scrolled {
+      background: rgba(253, 250, 246, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(42, 37, 32, 0.06);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Nav bottom border */
+    .nav-border {
+      border-bottom: 3px solid #3B6CB5;
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      pointer-events: none;
+    }
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-item:hover .nav-chevron,
+    .nav-item:focus-within .nav-chevron {
+      transform: rotate(180deg);
+    }
+    .nav-chevron {
+      transition: transform 0.2s ease;
+    }
+
+    /* Mobile accordion */
+    .mobile-sub {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-sub.open {
+      max-height: 300px;
+    }
+    .mobile-chevron {
+      transition: transform 0.2s ease;
+    }
+    .mobile-chevron.open {
+      transform: rotate(180deg);
+    }
+
+    /* Decorative quote marks */
+    .quote-mark {
+      font-family: 'DM Serif Display', Georgia, serif;
+      color: #3B6CB5;
+      opacity: 0.15;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white nav-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Desktop Nav Links -->
+        <div class="hidden xl:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Home</a>
+          <a href="about.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">About</a>
+          <a href="my-story-page.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">My Story</a>
+          <a href="here-i-am.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Here I Am - Book</a>
+
+          <!-- Coaching Dropdown -->
+          <div class="nav-item relative">
+            <a href="coaching.html" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Coaching
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[220px]">
+                <a href="your-future-self-12-week-individual-program.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Your Future Self</a>
+                <a href="wisdom-for-life-12-month-transformational-program.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Wisdom For Life</a>
+                <a href="1-1-coaching-deep-work-for-real-change.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Breakthrough Coaching</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="estate-planning.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Estate Planning</a>
+
+          <!-- Other Services Dropdown -->
+          <div class="nav-item relative">
+            <a href="other-services.html" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Other Services
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[260px]">
+                <a href="workshops-corporate-programs.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Workshops & Corporate Programs</a>
+                <a href="speaking-engagements-writing.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Speaking Engagements & Writing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden xl:block ml-auto">
+          <a href="contact-discovery-call.html" class="inline-flex items-center px-6 py-2.5 bg-[#3B6CB5] text-white text-sm font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+            Book a discovery call
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="xl:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-brand-stone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5]" aria-label="Toggle menu">
+          <div class="space-y-1.5" id="menu-icon">
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-transform duration-300 origin-center"></span>
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-opacity duration-300"></span>
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-transform duration-300 origin-center"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white z-40 pt-20 pb-8 px-8 overflow-y-auto xl:hidden">
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Home</a>
+        <a href="about.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">About</a>
+        <a href="my-story-page.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">My Story</a>
+        <a href="here-i-am.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Here I Am - Book</a>
+
+        <!-- Coaching with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-coaching">
+            <span class="text-base font-medium text-brand-charcoal">Coaching</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-coaching">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="your-future-self-12-week-individual-program.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Your Future Self</a>
+              <a href="wisdom-for-life-12-month-transformational-program.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Wisdom For Life</a>
+              <a href="1-1-coaching-deep-work-for-real-change.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Breakthrough Coaching</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="estate-planning.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Estate Planning</a>
+
+        <!-- Other Services with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-other-services">
+            <span class="text-base font-medium text-brand-charcoal">Other Services</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-other-services">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="workshops-corporate-programs.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Workshops & Corporate Programs</a>
+              <a href="speaking-engagements-writing.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Speaking Engagements & Writing</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact-discovery-call.html" class="mt-6 inline-flex items-center justify-center px-8 py-3.5 bg-[#3B6CB5] text-white text-lg font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+          Book a discovery call
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 grain overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Eyebrow -->
+        <p class="text-sm font-medium tracking-widest uppercase text-[#3B6CB5] mb-6 fade-up">Coming Soon</p>
+
+        <!-- Title -->
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl heading-tight text-brand-charcoal mb-8 fade-up fade-up-delay-1">
+          Here I Am
+        </h1>
+
+        <!-- Quote -->
+        <div class="relative max-w-2xl mx-auto mb-10 fade-up fade-up-delay-2">
+          <span class="quote-mark text-7xl absolute -top-6 -left-4 select-none">"</span>
+          <p class="font-display text-xl md:text-2xl text-brand-warm italic leading-relaxed px-6">
+            The three words that will help you bring your past and your future, into each present moment.
+          </p>
+          <span class="quote-mark text-7xl absolute -bottom-10 -right-4 select-none">"</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-brand-warm body-relaxed text-base md:text-lg max-w-2xl mx-auto fade-up fade-up-delay-3">
+          My very first and soon to be released book, 'Here I Am'. Part memoir, my book is in the 'self-help' or 'personal development' genre, so it's not just about me, it's about you, me and everyone else who's trying to understand who we are and why we do what we do, and to make sense of why we are here, subjectively experiencing this objective reality we call life.
+        </p>
+      </div>
+    </div>
+
+    <!-- Decorative background elements -->
+    <div class="absolute top-20 left-0 w-72 h-72 bg-[#3B6CB5]/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-3xl"></div>
+  </section>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-brand-sand"></div>
+
+  <!-- Coming Soon Section -->
+  <section class="py-24 lg:py-32 relative grain overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <!-- Left: Book Visual -->
+        <div class="relative">
+          <div class="aspect-[3/4] bg-brand-dark rounded-2xl shadow-floating overflow-hidden relative">
+            <!-- Stylized book cover -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
+              <div class="w-16 h-px bg-brand-gold mb-8"></div>
+              <p class="text-white/40 text-xs font-medium tracking-[0.3em] uppercase mb-6">Neil Sutera</p>
+              <h2 class="font-display text-4xl md:text-5xl text-white heading-tight mb-6">Here<br>I Am</h2>
+              <div class="w-16 h-px bg-brand-gold mt-2"></div>
+            </div>
+            <!-- Subtle gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-dark/40"></div>
+          </div>
+          <!-- Shadow accent -->
+          <div class="absolute -bottom-4 left-8 right-8 h-8 bg-brand-dark/10 rounded-2xl blur-xl -z-10"></div>
+        </div>
+
+        <!-- Right: Content -->
+        <div>
+          <p class="text-sm font-medium tracking-widest uppercase text-[#3B6CB5] mb-4">A Guide to Purpose</p>
+          <h2 class="font-display text-3xl md:text-4xl heading-tight text-brand-charcoal mb-8">
+            A guide written for those ready to stop drifting aimlessly through life and start living with purpose.
+          </h2>
+          <p class="text-brand-warm body-relaxed text-base mb-8">
+            Here I Am is about the quiet work of becoming whole. It's about true and authentic self-awareness. Helping you find an answer to some of life's questions, such as:
+          </p>
+
+          <!-- Questions -->
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-1 h-full min-h-[48px] bg-[#3B6CB5]/20 rounded-full flex-shrink-0"></div>
+              <p class="font-display text-lg text-brand-charcoal italic">
+                "How did I get here, at this point in my life?"
+              </p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-1 h-full min-h-[48px] bg-[#3B6CB5]/20 rounded-full flex-shrink-0"></div>
+              <p class="font-display text-lg text-brand-charcoal italic">
+                "Why do I do what I always do?"
+              </p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-1 h-full min-h-[48px] bg-[#3B6CB5]/20 rounded-full flex-shrink-0"></div>
+              <p class="font-display text-lg text-brand-charcoal italic">
+                "What's next for me, and what do I do now?"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-brand-sand"></div>
+
+  <!-- What You'll Discover Section -->
+  <section class="py-24 lg:py-32 bg-brand-stone/50 relative grain overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-sm font-medium tracking-widest uppercase text-[#3B6CB5] mb-4">Learn. Explore. Inside.</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl heading-tight text-brand-charcoal mb-6">
+          What you'll discover in the book
+        </h2>
+        <p class="text-brand-warm body-relaxed text-base md:text-lg">
+          This book is built on a simple truth: you don't transform one part of your life in isolation. Your health, your relationships, and your money are all connected to how you show up in the world.
+        </p>
+      </div>
+
+      <!-- Three Cards -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-elevated spring-hover group">
+          <div class="w-12 h-12 bg-[#3B6CB5]/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-[#3B6CB5]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl heading-tight text-brand-charcoal mb-3">The foundation of clarity</h3>
+          <p class="text-brand-warm body-relaxed text-sm">
+            Understanding who you are beneath the noise and expectation.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-elevated spring-hover group">
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25a2.25 2.25 0 0 1-2.25-2.25v-2.25Z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl heading-tight text-brand-charcoal mb-3">Alignment across all areas</h3>
+          <p class="text-brand-warm body-relaxed text-sm">
+            How to build a life where your choices reflect your values.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-elevated spring-hover group">
+          <div class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl heading-tight text-brand-charcoal mb-3">Practical wisdom for daily living</h3>
+          <p class="text-brand-warm body-relaxed text-sm">
+            Real tools and insights you can use immediately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-brand-sand"></div>
+
+  <!-- Early Access Section -->
+  <section class="py-24 lg:py-32 relative grain overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-sm font-medium tracking-widest uppercase text-[#3B6CB5] mb-4">Read. Discover. Get.</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl heading-tight text-brand-charcoal mb-6">
+          Early access
+        </h2>
+        <p class="text-brand-warm body-relaxed text-base md:text-lg mb-12">
+          Be the first to know when Here I Am becomes available.
+        </p>
+
+        <!-- Email Signup Form -->
+        <div class="max-w-md mx-auto">
+          <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="flex-1 px-5 py-3.5 bg-white border border-brand-sand rounded-lg text-brand-charcoal text-sm placeholder:text-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/30 focus:border-[#3B6CB5] transition-shadow duration-200"
+            >
+            <button
+              type="submit"
+              class="px-8 py-3.5 bg-[#3B6CB5] text-white text-sm font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150 whitespace-nowrap"
+            >
+              Notify me
+            </button>
+          </form>
+          <p class="text-brand-warm/60 text-xs mt-4">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative background elements -->
+    <div class="absolute bottom-10 left-1/4 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-10 right-1/4 w-48 h-48 bg-[#3B6CB5]/5 rounded-full blur-3xl"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <span class="font-display text-2xl heading-tight">Neil Sutera</span>
+          <p class="text-white/50 body-relaxed mt-4 text-sm">
+            Melbourne-based life coach helping people transform through the three realms of Health, Relationships, and Money.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Pages</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="index.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Home</a>
+            <a href="about.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">About</a>
+            <a href="my-story-page.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">My Story</a>
+            <a href="services.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Services</a>
+            <a href="contact.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Contact</h4>
+          <div class="flex flex-col gap-3">
+            <a href="mailto:info@neilsutera.com" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">info@neilsutera.com</a>
+            <a href="tel:+61407485408" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">+61 407 485 408</a>
+            <p class="text-white/50 text-sm">Melbourne, Australia</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-white/30 text-sm">&copy; 2026 Neil Sutera. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let menuOpen = false;
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      menuIcon.children[0].style.transform = '';
+      menuIcon.children[1].style.opacity = '';
+      menuIcon.children[2].style.transform = '';
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        menuIcon.children[0].style.transform = 'rotate(45deg) translateY(4px)';
+        menuIcon.children[1].style.opacity = '0';
+        menuIcon.children[2].style.transform = 'rotate(-45deg) translateY(-4px)';
+        document.body.style.overflow = 'hidden';
+      } else {
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeMobileMenu());
+    });
+
+    // Mobile accordion toggles
+    document.querySelectorAll('.mobile-accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const chevron = btn.querySelector('.mobile-chevron');
+        target.classList.toggle('open');
+        chevron.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
