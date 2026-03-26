@@ -1,110 +1,55 @@
-# CLAUDE.md - Accelerate Performance Football
+# CLAUDE.md - Neil Sutera Life Coaching
 
 ## Business Context
 
-**Business Name:** Accelerate Performance Football
-**Tagline:** "Football training refined"
-**Email:** info.accelerateperformancefootball@gmail.com
-**Phone:** 0401 117 862
-**Location:** Western Melbourne, Victoria, Australia
+**Business Name:** Neil Sutera
+**Email:** info@neilsutera.com
+**Phone:** +61 407 485 408
+**Location:** Melbourne, Australia
 **Copyright:** 2026
 
-### Coaches
-- **Chris Sutera** - Head Coach. 5 years coaching experience, 25 years playing experience
-- **James Sutera** - Trainer. 2 years coaching experience, 16 years playing experience
-- Both presented as experienced players dedicated to athlete development
-
 ### About
-- Private football (soccer) coaching business based in West Melbourne
-- Dedicated technique and performance coaching for footballers
-- Origin story: belief that junior players deserved access to professional-level coaching, and senior athletes deserved better training options than what was available
-- Emphasis on precision in every movement, decision, and play
-- Mission: bridging the gap between aspiring young talent and elite athletic development
-- Primarily private one-on-one coaching tailored to the individual, but can arrange small group sessions for players who want to train with a teammate
-- West Melbourne / Melbourne is the primary service area - use this for local SEO targeting (e.g. "private football coaching Melbourne", "soccer coaching West Melbourne")
-- Target market: junior players stepping up to senior level, senior players wanting to sharpen their game, and parents of junior players
-
-### Key Metrics
-- 125+ athletes trained
-- 92% progression rate
-- 4+ years in business
-- Athletes have progressed to senior leagues, improved their game significantly, and returned stronger after injury. Success framed around the dedication players bring to each session
-
-### FAQ Details
-- They coach juniors (ages 6+) preparing for senior football and senior players looking to refine their skills - ability and commitment matter more than age
-- Sessions typically run 60 minutes, structured around warm-up, technique work, and conditioning
-- They offer post-injury training and work alongside a player's medical team to rebuild strength and confidence
-- Players just need boots, water, and a willingness to work
-- Focus is private one-on-one coaching, but small group sessions available for players who want to train with a teammate
-
-### CTAs and Navigation
-- Multiple calls to action directing visitors to book a session or learn more via contact page
-- External shop link through Macron VIC for branded gear
+- Melbourne-based life coach helping people transform their lives
+- Core philosophy centres on "the three realms" - Health, Relationships, and Money
+- When these three areas are aligned, people experience clarity and purpose. When they're out of balance, people feel fragmented
+- Approach blends psychology, self-awareness, and practical action
+- Focused on helping people close the gap between who they are now and who they want to become
+- Melbourne is the primary service area - use this for local SEO targeting (e.g. "life coach Melbourne", "personal development coaching Melbourne")
+- Target market: individuals seeking personal transformation, professionals wanting clarity, people navigating major life decisions, and corporate teams
 
 ### Services
 
-**Junior Prep**
-- For players aged 6 and up, getting younger players ready for senior-level football
-- *Technique:* Drilling fundamentals until second nature - ball control and first touch under pressure, passing precision (short, long, weighted), footwork/movement patterns for coordination and explosive power
-- *Game Awareness:* Teaching juniors to read the play faster, improve positioning, and make quicker decisions under game conditions. Developing football IQ so tactical thinking becomes instinct
-- *Confidence Building:* Tracking progress visibly so players can see their improvement, feeding into match-day confidence
+**Your Future Self - 12-Week Intensive Program**
+- Structured 12-week coaching program
+- Designed for people ready to make meaningful change in a focused timeframe
+- Works across the three realms (Health, Relationships, Money) to create alignment
 
-**Senior Refinement**
-- For experienced players who already understand the game and want to level up
-- *Assessment:* Evaluating technical ability, decision-making, and physical conditioning. Gives the player a clear picture of where they sit and sets realistic targets (mirrors the "assess first" homepage approach)
-- *Technical Refinement:* Advanced drills on ball control, passing accuracy, and tactical awareness. Sharpening existing skills rather than teaching new ones - "refine what makes you dangerous." Each session builds on the player's existing foundation
-- *Game Awareness:* Tactical positioning, reading the field, anticipating movement, executing under pressure. Positioned as the separator between good and elite players
-- *Complete Game:* Three areas - match-ready conditioning (in-season and off-season fitness), mental resilience under pressure ("resilience coaching"), and injury prevention strategies. This is the only service page that explicitly mentions mental performance
+**Wisdom For Life - 12-Month Deep Transformation Program**
+- Long-term, deep transformation over 12 months
+- For people committed to sustained, fundamental change
+- Comprehensive work across all three realms with ongoing support
 
-**Off-Season Conditioning**
-- Sells the idea that the break between seasons is where real gains happen. Strong "gain an edge while others rest" angle throughout
-- *Conditioning:* Main focus - building aerobic endurance, explosive power/acceleration, and agility/directional change. Framed as building the physical engine that carries a player through matches. Most fitness-focused of all four service pages
-- *Technical Skills:* Passing, shooting, and ball control drills continue through off-season. Emphasis on precision, consistency, and game-specific scenarios so skills don't deteriorate during the break
-- *Personal Attention:* Reinforcing the private/small group format - every rep matters, players get real feedback, not generic group coaching
-- *Benefits:* Three selling points - injury prevention through structured conditioning, competitive advantage over players who take the break off, arriving at preseason in peak form. Most results-oriented framing across service pages
+**Breakthrough Coaching Sessions**
+- One-off sessions for people dealing with specific challenges or decisions
+- Targeted support for immediate clarity on a particular issue
+- Entry point for people not ready for a full program commitment
 
-**Injury Return**
-- Shortest and most focused service page. Positions recovery not as rest, but as controlled, structured work
-- *Rebuilding:* Two focus areas - strength work (rebuilding the physical foundation) and match fitness (getting back to game pace and pressure). Careful messaging - "gain ground without losing it" - acknowledging injury return is a delicate process
-- *Progress Tracking:* Leans hard into accountability and measurement. Weekly check-ins where the program gets adjusted based on how the player is moving. Clear milestones so the player sees tangible progress in strength, speed, and confidence each week. "Progress is measured, not guessed"
-- Note: The homepage and FAQ mention working alongside a player's medical team during injury return, but this dedicated service page doesn't repeat that detail - a missed opportunity for trust-building with parents and players
+**Estate Planning Guidance**
+- Helping Australians ensure assets go to the right people
+- Practical guidance on estate planning decisions
+- Complementary to the broader life coaching work (Money realm)
 
-### Process
-1. First session: assess a player's current level
-2. Build a personalised training plan targeting weaknesses and position-specific skills
-3. Track progress over ongoing 60-minute sessions
+**Corporate Workshops**
+- Focused on emotional intelligence and authentic communication
+- Designed for teams and organisations
+- Leadership development and workplace culture improvement
 
-### Pricing
+**Speaking & Writing**
+- Speaking engagements on personal development and leadership
+- Written content on personal growth, self-awareness, and the three realms
 
-Two formats: specialised 1-on-1 coaching (Tune Up pack only) and Small Unit sessions (2-6 players). Longer commitments = lower per-session rates.
-
-**Standard Pricing**
-
-| Package | Format | Duration | Total | Per Session |
-|---------|--------|----------|-------|-------------|
-| The Tune Up | 1 on 1 | 5-pack | $500 | $100 |
-| The Tune Up | Small Unit (2-6) | 5-pack | $325 | $65 |
-| The Game Changer | Small Unit (2-6) | 13-week block | $780 | $60 |
-| The Total 90 | Small Unit (2-6) | 26-week season | $1,430 | $55 |
-
-**Discounted Pricing (Siblings & West Point Soccer Club Players)**
-
-All Small Unit format (2-6 players):
-
-| Package | Duration | Total | Per Session | Saving vs Standard |
-|---------|----------|-------|-------------|--------------------|
-| The Tune Up | 5-pack | $275 | $55 | $10/session |
-| The Game Changer | 5-pack* | $715 | $55 | $5/session |
-| The Total 90 | 13-week block* | $1,300 | $50 | $5/session |
-
-*Possible inconsistencies on the site: The discounted Game Changer is listed as a "5 Pack Session" rather than a 13-week block (standard is 13 weeks). The discounted Total 90 is listed as 13 weeks rather than 26 weeks (standard is 26 weeks). These may be typos worth flagging to the client.
-
-### Sponsors / Partners
-- Loutakis
-- Kstruct
-- Western Mitsubishi
-- DiLallo Electrical
-- Branded gear sold through Macron Vic
+### CTAs and Navigation
+- Multiple calls to action directing visitors to book a session or learn more via contact page
 
 ---
 
