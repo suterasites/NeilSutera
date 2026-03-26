@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Future Self - 12-Week Program | Neil Sutera - Life Coach Melbourne</title>
+  <meta name="description" content="A focused 12-week coaching program to bridge the gap between where you are and where your future self is calling you to be. Clarity, momentum, and meaningful change.">
+  <meta name="keywords" content="12 week coaching program, personal transformation Melbourne, life coaching program, future self coaching, Neil Sutera">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Your Future Self - 12-Week Program | Neil Sutera">
+  <meta property="og:description" content="A focused 12-week coaching program to bridge the gap between where you are and where your future self is calling you to be.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Neil Sutera",
+    "description": "Melbourne-based life coach helping people transform their lives through the three realms - Health, Relationships, and Money.",
+    "telephone": "+61407485408",
+    "email": "info@neilsutera.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Melbourne" },
+      { "@type": "Place", "name": "Victoria" }
+    ],
+    "serviceType": ["Life Coaching", "Personal Development Coaching", "Corporate Workshops", "Estate Planning Guidance", "Speaking Engagements"]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFAF6',
+              stone: '#F0EBE3',
+              sand: '#E4DDD2',
+              charcoal: '#2A2520',
+              dark: '#1E1B18',
+              sage: '#6B7F5E',
+              'sage-dark': '#556B49',
+              'sage-light': '#8BA37E',
+              gold: '#B8924A',
+              'gold-light': '#D4B06A',
+              warm: '#8C7B6B',
+            }
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; color: #2A2520; background: #FDFAF6; }
+
+    /* Grain texture overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Spring easing */
+    .spring-hover {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    }
+    .spring-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Heading tracking */
+    .heading-tight { letter-spacing: -0.03em; }
+
+    /* Body line height */
+    .body-relaxed { line-height: 1.7; }
+
+    /* Layered shadows */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 2px rgba(42, 37, 32, 0.04),
+        0 4px 8px rgba(42, 37, 32, 0.04),
+        0 12px 24px rgba(42, 37, 32, 0.06);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 4px rgba(42, 37, 32, 0.03),
+        0 8px 16px rgba(42, 37, 32, 0.05),
+        0 24px 48px rgba(42, 37, 32, 0.08);
+    }
+
+    /* Fade in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      opacity: 0;
+    }
+    .fade-up-delay-1 { animation-delay: 0.15s; }
+    .fade-up-delay-2 { animation-delay: 0.3s; }
+    .fade-up-delay-3 { animation-delay: 0.45s; }
+
+    /* Nav scroll state */
+    .nav-scrolled {
+      background: rgba(253, 250, 246, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(42, 37, 32, 0.06);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Nav bottom border */
+    .nav-border {
+      border-bottom: 3px solid #3B6CB5;
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      pointer-events: none;
+    }
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-item:hover .nav-chevron,
+    .nav-item:focus-within .nav-chevron {
+      transform: rotate(180deg);
+    }
+    .nav-chevron {
+      transition: transform 0.2s ease;
+    }
+
+    /* Mobile accordion */
+    .mobile-sub {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-sub.open {
+      max-height: 300px;
+    }
+    .mobile-chevron {
+      transition: transform 0.2s ease;
+    }
+    .mobile-chevron.open {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white nav-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Desktop Nav Links -->
+        <div class="hidden xl:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Home</a>
+          <a href="about.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">About</a>
+          <a href="my-story-page.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">My Story</a>
+          <a href="here-i-am.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Here I Am - Book</a>
+
+          <!-- Coaching Dropdown -->
+          <div class="nav-item relative">
+            <a href="coaching.html" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Coaching
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[220px]">
+                <a href="your-future-self-12-week-individual-program.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Your Future Self</a>
+                <a href="wisdom-for-life-12-month-transformational-program.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Wisdom For Life</a>
+                <a href="1-1-coaching-deep-work-for-real-change.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Breakthrough Coaching</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="estate-planning.html" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Estate Planning</a>
+
+          <!-- Other Services Dropdown -->
+          <div class="nav-item relative">
+            <a href="other-services.html" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Other Services
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[260px]">
+                <a href="workshops-corporate-programs.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Workshops & Corporate Programs</a>
+                <a href="speaking-engagements-writing.html" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Speaking Engagements & Writing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden xl:block ml-auto">
+          <a href="contact-discovery-call.html" class="inline-flex items-center px-6 py-2.5 bg-[#3B6CB5] text-white text-sm font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+            Book a discovery call
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="xl:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-brand-stone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5]" aria-label="Toggle menu">
+          <div class="space-y-1.5" id="menu-icon">
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-transform duration-300 origin-center"></span>
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-opacity duration-300"></span>
+            <span class="block w-6 h-0.5 bg-brand-charcoal transition-transform duration-300 origin-center"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white z-40 pt-20 pb-8 px-8 overflow-y-auto xl:hidden">
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Home</a>
+        <a href="about.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">About</a>
+        <a href="my-story-page.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">My Story</a>
+        <a href="here-i-am.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Here I Am - Book</a>
+
+        <!-- Coaching with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-coaching">
+            <span class="text-base font-medium text-brand-charcoal">Coaching</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-coaching">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="your-future-self-12-week-individual-program.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Your Future Self</a>
+              <a href="wisdom-for-life-12-month-transformational-program.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Wisdom For Life</a>
+              <a href="1-1-coaching-deep-work-for-real-change.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Breakthrough Coaching</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="estate-planning.html" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Estate Planning</a>
+
+        <!-- Other Services with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-other-services">
+            <span class="text-base font-medium text-brand-charcoal">Other Services</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-other-services">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="workshops-corporate-programs.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Workshops & Corporate Programs</a>
+              <a href="speaking-engagements-writing.html" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Speaking Engagements & Writing</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact-discovery-call.html" class="mt-6 inline-flex items-center justify-center px-8 py-3.5 bg-[#3B6CB5] text-white text-lg font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+          Book a discovery call
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-sage/5 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <p class="fade-up text-brand-sage font-medium text-sm tracking-widest uppercase mb-6">12-week coaching program</p>
+      <h1 class="fade-up fade-up-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl text-brand-charcoal heading-tight leading-[1.1] mb-8">
+        Your Future Self
+      </h1>
+      <p class="fade-up fade-up-delay-2 text-lg sm:text-xl text-brand-warm body-relaxed mb-4">
+        A focused and transformative 12-week journey designed to help you bridge the gap between where you are and where your future self is calling you to be.
+      </p>
+      <p class="fade-up fade-up-delay-3 text-lg sm:text-xl text-brand-warm body-relaxed">
+        This program is ideal for individuals seeking clarity, momentum, and meaningful change - personally or professionally.
+      </p>
+    </div>
+  </section>
+
+  <!-- What You'll Learn Section -->
+  <section class="relative py-24 lg:py-32 bg-brand-stone grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-sage/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text -->
+        <div>
+          <p class="text-brand-sage font-medium text-sm tracking-widest uppercase mb-4">Focused</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
+            Twelve weeks of guided transformation
+          </h2>
+          <p class="text-lg text-brand-warm body-relaxed mb-8">
+            Through a blend of structured coaching, self-inquiry, and integrative tools, you'll learn to:
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-brand-sage mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Clarify your vision and values for the next chapter of your life.</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-brand-sage mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Identify the unconscious patterns that have been holding you back.</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-brand-sage mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Build sustainable habits that align with your purpose and authenticity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="absolute -top-6 -right-6 w-full h-full bg-brand-sage/10 rounded-3xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-gold/15 rounded-full blur-xl"></div>
+            <div class="relative overflow-hidden rounded-3xl shadow-floating">
+              <img
+                src="https://placehold.co/600x500"
+                alt="Abstract blurred motion image with vibrant streaks of orange, pink, blue, and purple against a pale background."
+                class="w-full h-auto object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/20 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-brand-sage/5 mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Phases Section -->
+  <section class="relative py-24 lg:py-32 grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-3xl -translate-x-1/4"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl mb-16">
+        <p class="text-brand-gold font-medium text-sm tracking-widest uppercase mb-4">The journey</p>
+        <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
+          What happens in twelve weeks
+        </h2>
+        <p class="text-lg text-brand-warm body-relaxed">
+          You'll move through three phases of intentional work. Each builds on the last, creating a foundation for change that lasts long after the program ends.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Phase 1 -->
+        <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
+          <div class="flex items-start gap-6">
+            <span class="shrink-0 w-10 h-10 rounded-full bg-brand-sage/15 flex items-center justify-center text-brand-sage font-medium text-sm">01</span>
+            <div>
+              <h3 class="font-display text-xl sm:text-2xl text-brand-charcoal mb-3">Know yourself deeply</h3>
+              <p class="text-lg text-brand-warm body-relaxed">
+                We start with honest reflection on who you are, what drives you, and what's been holding you back.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
+          <div class="flex items-start gap-6">
+            <span class="shrink-0 w-10 h-10 rounded-full bg-brand-sage/15 flex items-center justify-center text-brand-sage font-medium text-sm">02</span>
+            <div>
+              <h3 class="font-display text-xl sm:text-2xl text-brand-charcoal mb-3">Build your path forward</h3>
+              <p class="text-lg text-brand-warm body-relaxed">
+                With clarity comes direction. You'll create a plan that feels real and aligned with your actual values.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
+          <div class="flex items-start gap-6">
+            <span class="shrink-0 w-10 h-10 rounded-full bg-brand-sage/15 flex items-center justify-center text-brand-sage font-medium text-sm">03</span>
+            <div>
+              <h3 class="font-display text-xl sm:text-2xl text-brand-charcoal mb-3">Take real action</h3>
+              <p class="text-lg text-brand-warm body-relaxed">
+                Accountability and support help you move from thinking to doing, turning intention into tangible change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Format & Outcome -->
+  <section class="relative py-24 lg:py-32 bg-brand-stone grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-sage/5 rounded-full blur-3xl translate-y-1/4 translate-x-1/4"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
+          <p class="text-brand-sage font-medium text-sm tracking-widest uppercase mb-4">Format</p>
+          <p class="text-lg text-brand-warm body-relaxed">
+            Weekly sessions over 12 weeks (online via Zoom or phone).
+          </p>
+        </div>
+        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
+          <p class="text-brand-gold font-medium text-sm tracking-widest uppercase mb-4">Outcome</p>
+          <p class="text-lg text-brand-warm body-relaxed">
+            A renewed sense of direction, confidence, and connection with your authentic self.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-24 lg:py-32 grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-brand-sage/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+    <div class="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
+        Ready to meet your future self?
+      </h2>
+      <p class="text-lg text-brand-warm body-relaxed mb-10">
+        Book a discovery call to explore whether this 12-week program is the right fit for you.
+      </p>
+      <a href="contact-discovery-call.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#3B6CB5] text-white font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+        Book a discovery call
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div>
+          <span class="font-display text-2xl heading-tight">Neil Sutera</span>
+          <p class="text-white/50 body-relaxed mt-4 text-sm">
+            Melbourne-based life coach helping people transform through the three realms of Health, Relationships, and Money.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Pages</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="index.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Home</a>
+            <a href="about.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">About</a>
+            <a href="my-story-page.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">My Story</a>
+            <a href="services.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Services</a>
+            <a href="contact.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Contact</h4>
+          <div class="flex flex-col gap-3">
+            <a href="mailto:info@neilsutera.com" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">info@neilsutera.com</a>
+            <a href="tel:+61407485408" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">+61 407 485 408</a>
+            <p class="text-white/50 text-sm">Melbourne, Australia</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-white/30 text-sm">&copy; 2026 Neil Sutera. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let menuOpen = false;
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      menuIcon.children[0].style.transform = '';
+      menuIcon.children[1].style.opacity = '';
+      menuIcon.children[2].style.transform = '';
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        menuIcon.children[0].style.transform = 'rotate(45deg) translateY(4px)';
+        menuIcon.children[1].style.opacity = '0';
+        menuIcon.children[2].style.transform = 'rotate(-45deg) translateY(-4px)';
+        document.body.style.overflow = 'hidden';
+      } else {
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeMobileMenu());
+    });
+
+    // Mobile accordion toggles
+    document.querySelectorAll('.mobile-accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const chevron = btn.querySelector('.mobile-chevron');
+        target.classList.toggle('open');
+        chevron.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
