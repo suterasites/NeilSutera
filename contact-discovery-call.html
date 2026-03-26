@@ -3,37 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estate Planning - Family Wealth Protection | Neil Sutera - Life Coach Melbourne</title>
-  <meta name="description" content="Proactive estate planning guidance for Australian residents. Ensure the right assets go to the right people at the right time. Managing a family office and family wealth protection.">
-  <meta name="keywords" content="estate planning Melbourne, family wealth protection, family office management, succession planning, asset protection, Neil Sutera">
+  <title>Book a Discovery Call | Neil Sutera - Life Coach Melbourne</title>
+  <meta name="description" content="Book a free 45-minute discovery call with Neil Sutera. No pressure, just honest conversation about what matters to you. Life coaching Melbourne.">
+  <meta name="keywords" content="book discovery call, life coach Melbourne, free coaching consultation, Neil Sutera, personal development Melbourne">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Estate Planning - Family Wealth Protection | Neil Sutera">
-  <meta property="og:description" content="Proactive estate planning guidance. Ensure the right assets go to the right people at the right time.">
+  <meta property="og:title" content="Book a Discovery Call | Neil Sutera - Life Coach Melbourne">
+  <meta property="og:description" content="Book a free 45-minute discovery call. No pressure, just honest conversation about what matters to you.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AU">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Neil Sutera",
-    "description": "Melbourne-based life coach helping people transform their lives through the three realms - Health, Relationships, and Money.",
-    "telephone": "+61407485408",
-    "email": "info@neilsutera.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      { "@type": "Place", "name": "Melbourne" },
-      { "@type": "Place", "name": "Victoria" }
-    ],
-    "serviceType": ["Life Coaching", "Personal Development Coaching", "Corporate Workshops", "Estate Planning Guidance", "Speaking Engagements"]
-  }
-  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -73,6 +51,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', system-ui, sans-serif; color: #2A2520; background: #FDFAF6; }
 
+    /* Grain texture overlay */
     .grain::before {
       content: '';
       position: absolute;
@@ -83,6 +62,7 @@
       z-index: 1;
     }
 
+    /* Spring easing */
     .spring-hover {
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
     }
@@ -90,9 +70,13 @@
       transform: translateY(-4px);
     }
 
+    /* Heading tracking */
     .heading-tight { letter-spacing: -0.03em; }
+
+    /* Body line height */
     .body-relaxed { line-height: 1.7; }
 
+    /* Layered shadows */
     .shadow-elevated {
       box-shadow:
         0 1px 2px rgba(42, 37, 32, 0.04),
@@ -106,6 +90,7 @@
         0 24px 48px rgba(42, 37, 32, 0.08);
     }
 
+    /* Fade in animation */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -118,12 +103,14 @@
     .fade-up-delay-2 { animation-delay: 0.3s; }
     .fade-up-delay-3 { animation-delay: 0.45s; }
 
+    /* Nav scroll state */
     .nav-scrolled {
       background: rgba(253, 250, 246, 0.95);
       backdrop-filter: blur(12px);
       box-shadow: 0 1px 3px rgba(42, 37, 32, 0.06);
     }
 
+    /* Mobile menu */
     .mobile-menu {
       transform: translateX(100%);
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -132,10 +119,12 @@
       transform: translateX(0);
     }
 
+    /* Nav bottom border */
     .nav-border {
       border-bottom: 3px solid #3B6CB5;
     }
 
+    /* Dropdown */
     .nav-dropdown {
       opacity: 0;
       visibility: hidden;
@@ -158,6 +147,7 @@
       transition: transform 0.2s ease;
     }
 
+    /* Mobile accordion */
     .mobile-sub {
       max-height: 0;
       overflow: hidden;
@@ -170,6 +160,22 @@
       transition: transform 0.2s ease;
     }
     .mobile-chevron.open {
+      transform: rotate(180deg);
+    }
+
+    /* FAQ accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .faq-answer.open {
+      max-height: 300px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .faq-chevron.open {
       transform: rotate(180deg);
     }
   </style>
@@ -268,106 +274,248 @@
   <!-- Hero Section -->
   <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 grain overflow-hidden">
     <div class="absolute inset-0">
-      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-sage/5 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4"></div>
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#3B6CB5]/5 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4"></div>
       <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4"></div>
     </div>
 
     <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
-      <p class="fade-up text-brand-sage font-medium text-sm tracking-widest uppercase mb-6">Estate Planning</p>
+      <p class="fade-up text-[#3B6CB5] font-medium text-sm tracking-widest uppercase mb-6">Get in touch</p>
       <h1 class="fade-up fade-up-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl text-brand-charcoal heading-tight leading-[1.1] mb-8">
-        Managing a Family Office<br>Family Wealth Protection
+        Book a Discovery Call
       </h1>
-      <p class="fade-up fade-up-delay-2 font-display text-xl sm:text-2xl text-brand-charcoal leading-snug italic">
-        'The right assets, to the right people, at the right time'
+      <p class="fade-up fade-up-delay-2 text-lg sm:text-xl text-brand-warm body-relaxed max-w-2xl mx-auto">
+        A discovery call is where clarity starts. No pressure, just honest conversation about what matters to you.
       </p>
     </div>
   </section>
 
-  <!-- Main Content Section -->
+  <!-- A Conversation That Begins Your Next Chapter -->
   <section class="relative py-24 lg:py-32 bg-brand-stone grain overflow-hidden">
     <div class="absolute inset-0">
-      <div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-sage/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+      <div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#3B6CB5]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
     </div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Text -->
+        <div>
+          <p class="text-[#3B6CB5] font-medium text-sm tracking-widest uppercase mb-4">The first step</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
+            A Conversation That Begins Your Next Chapter
+          </h2>
+          <p class="text-lg text-brand-warm body-relaxed mb-6">
+            Every transformation begins with a conversation - a space where you can pause, reflect, and see more clearly where you are and where you'd like to go.
+          </p>
+          <p class="text-lg text-brand-warm body-relaxed mb-6">
+            The Discovery Call is a complimentary, 45-minute session designed to help you explore whether my coaching approach aligns with your goals and where you are in your journey.
+          </p>
+          <p class="text-lg text-brand-warm body-relaxed mb-8">
+            There's no pressure, no expectation - simply a chance to connect, ask questions, and gain clarity on what's possible for you right now.
+          </p>
+
+          <p class="text-brand-charcoal font-medium text-lg mb-5">Together, we'll:</p>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-[#3B6CB5] mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Explore what's working and what's not in your current life landscape.</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-[#3B6CB5] mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Identify which of the three realms of life - Health, Relationships, or Money - most needs your attention and energy.</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="w-2 h-2 rounded-full bg-[#3B6CB5] mt-2.5 shrink-0"></span>
+              <p class="text-lg text-brand-warm body-relaxed">Discuss which program or form of coaching may best serve your growth at this stage.</p>
+            </div>
+          </div>
+
+          <p class="text-lg text-brand-warm body-relaxed mt-8">
+            Even if we decide not to work together, you'll leave the call with greater insight into yourself and your next steps forward.
+          </p>
+        </div>
+
         <!-- Image -->
-        <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+        <div class="flex justify-center lg:justify-end">
           <div class="relative">
-            <div class="absolute -top-6 -left-6 w-full h-full bg-brand-gold/10 rounded-3xl"></div>
-            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-sage/15 rounded-full blur-xl"></div>
+            <div class="absolute -top-6 -right-6 w-full h-full bg-[#3B6CB5]/10 rounded-3xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-gold/15 rounded-full blur-xl"></div>
             <div class="relative overflow-hidden rounded-3xl shadow-floating">
               <img
-                src="https://placehold.co/600x500"
-                alt="Hand holding a pen poised above a last will and testament document."
+                src="Assets/Image of Neil Sutera.jpeg"
+                alt="Smiling middle-aged man with gray hair wearing a blue shirt and checkered blazer against a white background."
                 class="w-full h-auto object-cover"
                 loading="lazy"
               >
               <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/20 via-transparent to-transparent"></div>
-              <div class="absolute inset-0 bg-brand-gold/5 mix-blend-multiply"></div>
+              <div class="absolute inset-0 bg-[#3B6CB5]/5 mix-blend-multiply"></div>
             </div>
           </div>
-        </div>
-
-        <!-- Text -->
-        <div class="order-1 lg:order-2">
-          <p class="text-brand-gold font-medium text-sm tracking-widest uppercase mb-4">Proactive planning</p>
-          <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
-            Don't leave it until it's too late
-          </h2>
-          <p class="text-lg text-brand-warm body-relaxed mb-6">
-            Most people handle estate planning reactively, often when it's too late.
-          </p>
-          <p class="text-lg text-brand-warm body-relaxed mb-8">
-            I invite you to become more pro-active about your estate, to ensure that the right assets do end up with the right people at the right time.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Accreditation & Disclaimer Section -->
+  <!-- What to Expect -->
   <section class="relative py-24 lg:py-32 grain overflow-hidden">
     <div class="absolute inset-0">
       <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-3xl -translate-x-1/4"></div>
     </div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 gap-8">
-        <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
-          <p class="text-brand-sage font-medium text-sm tracking-widest uppercase mb-4">Accreditation</p>
-          <p class="text-lg text-brand-warm body-relaxed">
-            Succession, Asset Protection and Estate Planning Adviser (SAPEPAA) - Accreditation pending.
-          </p>
+    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- What to Expect Details -->
+        <div>
+          <p class="text-brand-gold font-medium text-sm tracking-widest uppercase mb-4">Details</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-8">
+            What to Expect
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-xl bg-brand-stone flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-brand-charcoal mb-1">Duration</h3>
+                <p class="text-brand-warm body-relaxed">45 minutes</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-xl bg-brand-stone flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-brand-charcoal mb-1">Format</h3>
+                <p class="text-brand-warm body-relaxed">Online (Zoom, preferred platform or mobile)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-xl bg-brand-stone flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-brand-charcoal mb-1">Focus</h3>
+                <p class="text-brand-warm body-relaxed">Exploration, clarity, and connection - not a sales pitch</p>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- Text Block -->
         <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
-          <p class="text-brand-gold font-medium text-sm tracking-widest uppercase mb-4">Please note</p>
           <p class="text-lg text-brand-warm body-relaxed">
-            This service is not financial advice or legal advice and is only available to Australian residents.
+            This is your opportunity to step back and look at the larger pattern of your life - to begin the process of aligning your outer goals with your inner truth.
           </p>
+          <div class="mt-8">
+            <a href="mailto:info@neilsutera.com" class="inline-flex items-center justify-center w-full px-8 py-4 bg-[#3B6CB5] text-white font-medium rounded-full spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+              Book your discovery call
+            </a>
+            <p class="text-center text-sm text-brand-warm mt-4">Or reach out directly at <a href="mailto:info@neilsutera.com" class="text-[#3B6CB5] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">info@neilsutera.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions Section -->
+  <section class="relative py-24 lg:py-32 bg-brand-stone grain overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#3B6CB5]/5 rounded-full blur-3xl translate-y-1/4 translate-x-1/4"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-[#3B6CB5] font-medium text-sm tracking-widest uppercase mb-4">Questions</p>
+        <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-4">
+          A few things worth knowing before we talk
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-2xl shadow-elevated overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-brand-cream/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded-2xl" aria-expanded="false">
+            <h3 class="font-display text-xl text-brand-charcoal pr-4">What happens on the call?</h3>
+            <svg class="faq-chevron w-5 h-5 text-brand-warm shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <p class="text-lg text-brand-warm body-relaxed">We'll spend forty-five minutes getting to know what matters to you. You'll share where you are now and where you want to be. I'll listen, ask questions, and help you see what's possible. No sales pitch. Just real conversation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-2xl shadow-elevated overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-brand-cream/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded-2xl" aria-expanded="false">
+            <h3 class="font-display text-xl text-brand-charcoal pr-4">Is there a cost?</h3>
+            <svg class="faq-chevron w-5 h-5 text-brand-warm shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <p class="text-lg text-brand-warm body-relaxed">The discovery call is free. It's my way of making sure we're a good fit before we talk about working together. Your time matters, and so does mine.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-2xl shadow-elevated overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-brand-cream/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded-2xl" aria-expanded="false">
+            <h3 class="font-display text-xl text-brand-charcoal pr-4">How long does it take?</h3>
+            <svg class="faq-chevron w-5 h-5 text-brand-warm shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <p class="text-lg text-brand-warm body-relaxed">Forty-five minutes. That's enough time to understand what you're working with and explore what real change might look like for you.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-2xl shadow-elevated overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-brand-cream/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded-2xl" aria-expanded="false">
+            <h3 class="font-display text-xl text-brand-charcoal pr-4">Is everything between us confidential?</h3>
+            <svg class="faq-chevron w-5 h-5 text-brand-warm shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+              <p class="text-lg text-brand-warm body-relaxed">Yes. Everything you tell me stays between us, confidentiality isn't negotiable.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="relative py-24 lg:py-32 bg-brand-stone grain overflow-hidden">
+  <section class="relative py-24 lg:py-32 grain overflow-hidden">
     <div class="absolute inset-0">
-      <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-brand-sage/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
     </div>
 
-    <div class="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
       <h2 class="font-display text-3xl sm:text-4xl text-brand-charcoal heading-tight leading-[1.15] mb-6">
-        Ready to protect your family's future?
+        Ready to begin?
       </h2>
-      <p class="text-lg text-brand-warm body-relaxed mb-10">
-        Book a call to discuss how proactive estate planning can give you and your family peace of mind.
+      <p class="text-lg text-brand-warm body-relaxed mb-10 max-w-xl mx-auto">
+        The first step is always the simplest. Reach out, and let's have a conversation.
       </p>
-      <a href="contact-discovery-call.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#3B6CB5] text-white font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
-        Book a call
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:info@neilsutera.com" class="inline-flex items-center justify-center px-8 py-4 bg-[#3B6CB5] text-white font-medium rounded-full spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+          Book your discovery call
+        </a>
+        <a href="tel:+61407485408" class="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-sand text-brand-charcoal font-medium rounded-full spring-hover hover:border-[#3B6CB5] hover:text-[#3B6CB5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+          +61 407 485 408
+        </a>
+      </div>
     </div>
   </section>
 
@@ -375,22 +523,27 @@
   <footer class="bg-brand-dark text-white py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
         <div>
           <span class="font-display text-2xl heading-tight">Neil Sutera</span>
           <p class="text-white/50 body-relaxed mt-4 text-sm">
             Melbourne-based life coach helping people transform through the three realms of Health, Relationships, and Money.
           </p>
         </div>
+
+        <!-- Quick Links -->
         <div>
           <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Pages</h4>
           <nav class="flex flex-col gap-3">
             <a href="index.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Home</a>
             <a href="about.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">About</a>
             <a href="my-story-page.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">My Story</a>
-            <a href="services.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Services</a>
+            <a href="coaching.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Coaching</a>
             <a href="contact-discovery-call.html" class="text-white/70 hover:text-white spring-hover text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-sage rounded">Contact</a>
           </nav>
         </div>
+
+        <!-- Contact -->
         <div>
           <h4 class="font-medium text-sm tracking-widest uppercase text-white/30 mb-4">Contact</h4>
           <div class="flex flex-col gap-3">
@@ -400,13 +553,16 @@
           </div>
         </div>
       </div>
+
       <div class="border-t border-white/10 pt-8 text-center">
         <p class="text-white/30 text-sm">&copy; 2026 Neil Sutera. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 40) {
@@ -416,6 +572,7 @@
       }
     });
 
+    // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
@@ -443,16 +600,39 @@
       }
     });
 
+    // Close mobile menu on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => closeMobileMenu());
     });
 
+    // Mobile accordion toggles
     document.querySelectorAll('.mobile-accordion-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const target = document.getElementById(btn.dataset.target);
         const chevron = btn.querySelector('.mobile-chevron');
         target.classList.toggle('open');
         chevron.classList.toggle('open');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const chevron = btn.querySelector('.faq-chevron');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+        // Open if was closed
+        if (!isOpen) {
+          answer.classList.add('open');
+          chevron.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   </script>
