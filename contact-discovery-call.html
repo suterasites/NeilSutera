@@ -409,17 +409,65 @@
           </div>
         </div>
 
-        <!-- Text Block -->
-        <div class="bg-brand-stone/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-elevated">
-          <p class="text-lg text-brand-warm body-relaxed">
-            This is your opportunity to step back and look at the larger pattern of your life - to begin the process of aligning your outer goals with your inner truth.
-          </p>
-          <div class="mt-8">
-            <a href="mailto:info@neilsutera.com" class="inline-flex items-center justify-center w-full px-8 py-4 bg-[#3B6CB5] text-white font-medium rounded-full spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
-              Book your discovery call
-            </a>
-            <p class="text-center text-sm text-brand-warm mt-4">Or reach out directly at <a href="mailto:info@neilsutera.com" class="text-[#3B6CB5] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">info@neilsutera.com</a></p>
-          </div>
+        <!-- Contact Form -->
+        <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-floating">
+          <h3 class="font-display text-2xl text-brand-charcoal heading-tight mb-2">Request Your Call</h3>
+          <p class="text-sm text-brand-warm mb-6">Fill in the form and I'll be in touch within 24 hours.</p>
+
+          <form id="contact-form" class="space-y-5" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="first-name" class="block text-sm font-medium text-brand-charcoal mb-1.5">First name</label>
+                <input type="text" id="first-name" name="first-name" required
+                  class="w-full px-4 py-3 bg-brand-cream border border-brand-sand rounded-xl text-brand-charcoal placeholder-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/40 focus:border-[#3B6CB5] transition-colors duration-200"
+                  placeholder="Your first name">
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm font-medium text-brand-charcoal mb-1.5">Last name</label>
+                <input type="text" id="last-name" name="last-name" required
+                  class="w-full px-4 py-3 bg-brand-cream border border-brand-sand rounded-xl text-brand-charcoal placeholder-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/40 focus:border-[#3B6CB5] transition-colors duration-200"
+                  placeholder="Your last name">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-brand-charcoal mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 bg-brand-cream border border-brand-sand rounded-xl text-brand-charcoal placeholder-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/40 focus:border-[#3B6CB5] transition-colors duration-200"
+                placeholder="your@email.com">
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-brand-charcoal mb-1.5">Phone <span class="text-brand-warm font-normal">(optional)</span></label>
+              <input type="tel" id="phone" name="phone"
+                class="w-full px-4 py-3 bg-brand-cream border border-brand-sand rounded-xl text-brand-charcoal placeholder-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/40 focus:border-[#3B6CB5] transition-colors duration-200"
+                placeholder="+61 400 000 000">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-brand-charcoal mb-1.5">What's on your mind?</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full px-4 py-3 bg-brand-cream border border-brand-sand rounded-xl text-brand-charcoal placeholder-brand-warm/50 focus:outline-none focus:ring-2 focus:ring-[#3B6CB5]/40 focus:border-[#3B6CB5] transition-colors duration-200 resize-none"
+                placeholder="Tell me a little about where you are and what you're hoping to explore..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn"
+              class="w-full inline-flex items-center justify-center px-8 py-4 bg-[#3B6CB5] text-white font-medium rounded-full spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
+              Send request
+            </button>
+
+            <!-- Success message -->
+            <div id="form-success" class="hidden text-center py-4">
+              <p class="text-brand-sage font-medium">Thank you. I'll be in touch soon.</p>
+            </div>
+
+            <!-- Error message -->
+            <div id="form-error" class="hidden text-center py-4">
+              <p class="text-red-600 font-medium text-sm">Something went wrong. Please email <a href="mailto:info@neilsutera.com" class="underline">info@neilsutera.com</a> directly.</p>
+            </div>
+          </form>
+
+          <p class="text-center text-sm text-brand-warm mt-5">Or reach out directly at <a href="mailto:info@neilsutera.com" class="text-[#3B6CB5] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">info@neilsutera.com</a></p>
         </div>
       </div>
     </div>
@@ -634,6 +682,40 @@
           btn.setAttribute('aria-expanded', 'true');
         }
       });
+    });
+
+    // Contact form submission
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const firstName = document.getElementById('first-name').value.trim();
+      const lastName = document.getElementById('last-name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!firstName || !lastName || !email || !message) {
+        return;
+      }
+
+      const subject = encodeURIComponent('Discovery Call Request from ' + firstName + ' ' + lastName);
+      const body = encodeURIComponent(
+        'Name: ' + firstName + ' ' + lastName + '\n' +
+        'Email: ' + email + '\n' +
+        (phone ? 'Phone: ' + phone + '\n' : '') +
+        '\nMessage:\n' + message
+      );
+
+      window.location.href = 'mailto:info@neilsutera.com?subject=' + subject + '&body=' + body;
+
+      // Show success state
+      submitBtn.style.display = 'none';
+      formSuccess.classList.remove('hidden');
     });
   </script>
 </body>
