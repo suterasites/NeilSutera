@@ -145,6 +145,45 @@
     .nav-border {
       border-bottom: 3px solid #3B6CB5;
     }
+
+    /* Dropdown */
+    .nav-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      pointer-events: none;
+    }
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-item:hover .nav-chevron,
+    .nav-item:focus-within .nav-chevron {
+      transform: rotate(180deg);
+    }
+    .nav-chevron {
+      transition: transform 0.2s ease;
+    }
+
+    /* Mobile accordion */
+    .mobile-sub {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-sub.open {
+      max-height: 300px;
+    }
+    .mobile-chevron {
+      transition: transform 0.2s ease;
+    }
+    .mobile-chevron.open {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -159,9 +198,37 @@
           <a href="/about" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">About</a>
           <a href="/my-story-page" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">My Story</a>
           <a href="/here-i-am" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Here I Am - Book</a>
-          <a href="/coaching" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Coaching</a>
+
+          <!-- Coaching Dropdown -->
+          <div class="nav-item relative">
+            <a href="/coaching" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Coaching
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[220px]">
+                <a href="/coaching/your-future-self-12-week-individual-program" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Your Future Self</a>
+                <a href="/coaching/wisdom-for-life-12-month-transformational-program" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Wisdom For Life</a>
+                <a href="/coaching/1-1-coaching-deep-work-for-real-change" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Breakthrough Coaching</a>
+              </div>
+            </div>
+          </div>
+
           <a href="/estate-planing" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Estate Planing</a>
-          <a href="/other-services" class="text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">Other Services</a>
+
+          <!-- Other Services Dropdown -->
+          <div class="nav-item relative">
+            <a href="/other-services" class="flex items-center gap-1 text-sm font-medium text-brand-charcoal hover:text-[#3B6CB5] spring-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] rounded">
+              Other Services
+              <svg class="nav-chevron w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 pt-3">
+              <div class="bg-white rounded-lg shadow-floating border border-gray-100 py-1 min-w-[260px]">
+                <a href="/coaching/workshops-corporate-programs" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Workshops & Corporate Programs</a>
+                <a href="/coaching/speaking-engagements-writing" class="block px-4 py-2.5 text-sm text-brand-charcoal hover:text-[#3B6CB5] hover:bg-gray-50">Speaking Engagements & Writing</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- CTA -->
@@ -189,9 +256,38 @@
         <a href="/about" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">About</a>
         <a href="/my-story-page" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">My Story</a>
         <a href="/here-i-am" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Here I Am - Book</a>
-        <a href="/coaching" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Coaching</a>
+
+        <!-- Coaching with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-coaching">
+            <span class="text-base font-medium text-brand-charcoal">Coaching</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-coaching">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="/coaching/your-future-self-12-week-individual-program" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Your Future Self</a>
+              <a href="/coaching/wisdom-for-life-12-month-transformational-program" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Wisdom For Life</a>
+              <a href="/coaching/1-1-coaching-deep-work-for-real-change" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Breakthrough Coaching</a>
+            </div>
+          </div>
+        </div>
+
         <a href="/estate-planing" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Estate Planing</a>
-        <a href="/other-services" class="text-base font-medium text-brand-charcoal py-3 border-b border-gray-100 hover:text-[#3B6CB5]">Other Services</a>
+
+        <!-- Other Services with sub-links -->
+        <div class="border-b border-gray-100">
+          <button class="mobile-accordion-btn w-full flex items-center justify-between py-3" data-target="mobile-other-services">
+            <span class="text-base font-medium text-brand-charcoal">Other Services</span>
+            <svg class="mobile-chevron w-4 h-4 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="mobile-sub" id="mobile-other-services">
+            <div class="flex flex-col pb-3 pl-4">
+              <a href="/coaching/workshops-corporate-programs" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Workshops & Corporate Programs</a>
+              <a href="/coaching/speaking-engagements-writing" class="text-sm text-brand-warm py-2 hover:text-[#3B6CB5]">Speaking Engagements & Writing</a>
+            </div>
+          </div>
+        </div>
+
         <a href="/contact-discovery-call" class="mt-6 inline-flex items-center justify-center px-8 py-3.5 bg-[#3B6CB5] text-white text-lg font-medium rounded-lg spring-hover hover:bg-[#2F5A9A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B6CB5] active:scale-95 transition-transform duration-150">
           Book a discovery call
         </a>
@@ -326,7 +422,7 @@
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
         <p class="text-brand-sage font-medium text-sm tracking-widest uppercase mb-4">Work With Me</p>
-        <h2 class="font-display text-4xl sm:text-5xl text-brand-charcoal heading-tight mb-8">Coaching</h2>
+        <h2 class="font-display text-4xl sm:text-5xl text-brand-charcoal heading-tight mb-8">Coaching and Other Services</h2>
         <p class="text-brand-warm body-relaxed text-lg mb-6">
           My coaching is for those who are ready to move beyond surface-level change and engage with life at a deeper level - whether that means finding clarity in a transition, strengthening relationships, building financial stability, or cultivating a sense of purpose and authenticity.
         </p>
@@ -602,6 +698,16 @@
     // Close mobile menu on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => closeMobileMenu());
+    });
+
+    // Mobile accordion toggles
+    document.querySelectorAll('.mobile-accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const chevron = btn.querySelector('.mobile-chevron');
+        target.classList.toggle('open');
+        chevron.classList.toggle('open');
+      });
     });
   </script>
 </body>
